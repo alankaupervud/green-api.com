@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Test API Page</title>
+    <style>
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+        }
+        #controlPanel {
+            width: 30%;
+            padding: 20px;
+        }
+        #apiResponse {
+            width: 70%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        input, button, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 80px;
+            resize: none;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        pre {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div id="controlPanel">
+        <h1>API Testing Page</h1>
+        <label for="idInstance">ID Instance:</label>
+        <input type="text" id="idInstance" placeholder="Enter ID Instance">
+        <label for="apiToken">API Token:</label>
+        <input type="text" id="apiToken" placeholder="Enter API Token">
+        <button id="getSettings">Get Settings</button>
+        <button id="getState">Get State</button>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" placeholder="Enter phone number">
+        <label for="messageText">Message Text:</label>
+        <textarea id="messageText" placeholder="Enter message text" rows="4" style="resize: none;"></textarea>
+        <button id="sendMessage">Send Message</button>
+
+        <label for="filePhoneNumber">Phone Number for File:</label>
+        <input type="text" id="filePhoneNumber" placeholder="Enter phone number for file">
+        <label for="fileUrl">File URL:</label>
+        <input type="text" id="fileUrl" placeholder="Enter file URL">
+        <button id="sendFile">Send File</button>
+    </div>
+    <pre id="apiResponse">Responses will appear here.</pre>
+
+    <script src="script.js"></script>
+</body>
+</html>
